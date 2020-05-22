@@ -44,8 +44,22 @@
           <description>OTG_FS control and status register (OTG_FS_GOTGCTL)</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
-          <resetValue>0x00000800</resetValue>
+          <resetValue>0x00010000</resetValue>
           <fields>
+            <field>
+              <name>CURMOD</name>
+              <description>Current mode of operation</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OTGVER</name>
+              <description>OTG version</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
             <field>
               <name>BSVLD</name>
               <description>B-session valid</description>
@@ -75,6 +89,13 @@
               <access>read-only</access>
             </field>
             <field>
+              <name>EHEN</name>
+              <description>Embedded host enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>DHNPEN</name>
               <description>Device HNP enabled</description>
               <bitOffset>11</bitOffset>
@@ -101,6 +122,48 @@
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>BVALOVAL</name>
+              <description>B-peripheral session valid override value</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BVALOEN</name>
+              <description>B-peripheral session valid override enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVALOVAL</name>
+              <description>A-peripheral session valid override value</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVALOEN</name>
+              <description>A-peripheral session valid override enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VBVALOVAL</name>
+              <description>Vbus valid override value</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VBVALOEN</name>
+              <description>Vbus valid override enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>SRQ</name>
