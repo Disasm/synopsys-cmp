@@ -268,15 +268,8 @@
           <description>OTG_FS USB configuration register (OTG_FS_GUSBCFG)</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
-          <resetValue>0x00000A00</resetValue>
+          <resetValue>0x00001440</resetValue>
           <fields>
-            <field>
-              <name>CTXPKT</name>
-              <description>Corrupt Tx packet</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>FDMOD</name>
               <description>Force device mode</description>
@@ -317,7 +310,7 @@
               <description>Full Speed serial transceiver select</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>write-only</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>TOCAL</name>
