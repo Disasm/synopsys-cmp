@@ -1005,33 +1005,21 @@
         <register>
           <name>GCCFG</name>
           <displayName>GCCFG</displayName>
-          <description>OTG_FS general core configuration register (OTG_FS_GCCFG)</description>
+          <description>OTG general core configuration register (OTG_GCCFG)</description>
           <addressOffset>0x38</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>SOFOUTEN</name>
-              <description>SOF output enable</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>VBUSBSEN</name>
-              <description>Enable the VBUS sensing device</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>VBUSASEN</name>
-              <description>Enable the VBUS sensing device</description>
-              <bitOffset>18</bitOffset>
+              <name>VBDEN</name>
+              <description>USB Vbus detection enable</description>
+              <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>PWRDWN</name>
-              <description>Power down</description>
+              <description>Power down control</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
