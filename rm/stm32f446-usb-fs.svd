@@ -831,6 +831,7 @@
         </register>
         <register>
           <name>GRXSTSP_Device</name>
+          <displayName>GRXSTSP_Device</displayName>
           <description>OTG status read and pop (device mode)</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
@@ -877,6 +878,7 @@
         </register>
         <register>
           <name>GRXSTSP_Host</name>
+          <displayName>GRXSTSP_Host</displayName>
           <description>OTG status read and pop (host mode)</description>
           <alternateRegister>GRXSTSP_Device</alternateRegister>
           <addressOffset>0x20</addressOffset>
