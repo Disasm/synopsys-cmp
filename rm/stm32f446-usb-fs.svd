@@ -28,14 +28,14 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM7</name>
-        <description>TIM7 global interrupt</description>
-        <value>55</value>
+        <name>OTG_FS_WKUP</name>
+        <description>USB On-The-Go FS Wakeup through EXTI line interrupt</description>
+        <value>42</value>
       </interrupt>
       <interrupt>
-        <name>TIM7</name>
-        <description>TIM7 global interrupt</description>
-        <value>55</value>
+        <name>OTG_FS</name>
+        <description>USB On The Go FS global interrupt</description>
+        <value>67</value>
       </interrupt>
       <registers>
         <register>
@@ -1060,26 +1060,6 @@
         <size>0x400</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>ETH</name>
-        <description>Ethernet global interrupt</description>
-        <value>61</value>
-      </interrupt>
-      <interrupt>
-        <name>ETH</name>
-        <description>Ethernet global interrupt</description>
-        <value>61</value>
-      </interrupt>
-      <interrupt>
-        <name>ETH_WKUP</name>
-        <description>Ethernet Wakeup through EXTI line interrupt</description>
-        <value>62</value>
-      </interrupt>
-      <interrupt>
-        <name>ETH_WKUP</name>
-        <description>Ethernet Wakeup through EXTI line interrupt</description>
-        <value>62</value>
-      </interrupt>
       <registers>
         <register>
           <name>HCFG</name>
