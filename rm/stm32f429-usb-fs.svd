@@ -1,0 +1,4612 @@
+<device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xsi:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32F429</name>
+  <version>1.2</version>
+  <description>STM32F429</description>
+  <cpu>
+    <name>CM4</name>
+    <revision>r1p0</revision>
+    <endian>little</endian>
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>false</fpuPresent>
+    <nvicPrioBits>4</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+  </cpu>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>0x20</size>
+  <resetValue>0x0</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>OTG_FS_GLOBAL</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>OTG_FS_WKUP</name>
+        <description>USB On-The-Go FS Wakeup through EXTI line interrupt</description>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_FS_WKUP</name>
+        <description>USB On-The-Go FS Wakeup through EXTI line interrupt</description>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_FS</name>
+        <description>USB On The Go FS global interrupt</description>
+        <value>67</value>
+      </interrupt>
+      <interrupt>
+        <name>OTG_FS</name>
+        <description>USB On The Go FS global interrupt</description>
+        <value>67</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>GOTGCTL</name>
+          <displayName>GOTGCTL</displayName>
+          <description>OTG_FS control and status register (OTG_FS_GOTGCTL)</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000800</resetValue>
+          <fields>
+            <field>
+              <name>BSVLD</name>
+              <description>B-session valid</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ASVLD</name>
+              <description>A-session valid</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DBCT</name>
+              <description>Long/short debounce time</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CIDSTS</name>
+              <description>Connector ID status</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>DHNPEN</name>
+              <description>Device HNP enabled</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HSHNPEN</name>
+              <description>Host set HNP enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HNPRQ</name>
+              <description>HNP request</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HNGSCS</name>
+              <description>Host negotiation success</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SRQ</name>
+              <description>Session request</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SRQSCS</name>
+              <description>Session request success</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GOTGINT</name>
+          <displayName>GOTGINT</displayName>
+          <description>OTG_FS interrupt register (OTG_FS_GOTGINT)</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DBCDNE</name>
+              <description>Debounce done</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ADTOCHG</name>
+              <description>A-device timeout change</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HNGDET</name>
+              <description>Host negotiation detected</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>HNSSCHG</name>
+              <description>Host negotiation success status change</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRSSCHG</name>
+              <description>Session request success status change</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEDET</name>
+              <description>Session end detected</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GAHBCFG</name>
+          <displayName>GAHBCFG</displayName>
+          <description>OTG_FS AHB configuration register (OTG_FS_GAHBCFG)</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PTXFELVL</name>
+              <description>Periodic TxFIFO empty level</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXFELVL</name>
+              <description>TxFIFO empty level</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GINT</name>
+              <description>Global interrupt mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GUSBCFG</name>
+          <displayName>GUSBCFG</displayName>
+          <description>OTG_FS USB configuration register (OTG_FS_GUSBCFG)</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000A00</resetValue>
+          <fields>
+            <field>
+              <name>CTXPKT</name>
+              <description>Corrupt Tx packet</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FDMOD</name>
+              <description>Force device mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FHMOD</name>
+              <description>Force host mode</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRDT</name>
+              <description>USB turnaround time</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HNPCAP</name>
+              <description>HNP-capable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SRPCAP</name>
+              <description>SRP-capable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PHYSEL</name>
+              <description>Full Speed serial transceiver select</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TOCAL</name>
+              <description>FS timeout calibration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GRSTCTL</name>
+          <displayName>GRSTCTL</displayName>
+          <description>OTG_FS reset register (OTG_FS_GRSTCTL)</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x20000000</resetValue>
+          <fields>
+            <field>
+              <name>AHBIDL</name>
+              <description>AHB master idle</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXFNUM</name>
+              <description>TxFIFO number</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXFFLSH</name>
+              <description>TxFIFO flush</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXFFLSH</name>
+              <description>RxFIFO flush</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FCRST</name>
+              <description>Host frame counter reset</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HSRST</name>
+              <description>HCLK soft reset</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CSRST</name>
+              <description>Core soft reset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GINTSTS</name>
+          <displayName>GINTSTS</displayName>
+          <description>OTG_FS core interrupt register (OTG_FS_GINTSTS)</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x04000020</resetValue>
+          <fields>
+            <field>
+              <name>WKUPINT</name>
+              <description>Resume/remote wakeup detected interrupt</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SRQINT</name>
+              <description>Session request/new session detected interrupt</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DISCINT</name>
+              <description>Disconnect detected interrupt</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CIDSCHG</name>
+              <description>Connector ID status change</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PTXFE</name>
+              <description>Periodic TxFIFO empty</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HCINT</name>
+              <description>Host channels interrupt</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HPRTINT</name>
+              <description>Host port interrupt</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>IPXFR_INCOMPISOOUT</name>
+              <description>Incomplete periodic transfer(Host mode)/Incomplete isochronous OUT transfer(Device mode)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IISOIXFR</name>
+              <description>Incomplete isochronous IN transfer</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OEPINT</name>
+              <description>OUT endpoint interrupt</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>IEPINT</name>
+              <description>IN endpoint interrupt</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EOPF</name>
+              <description>End of periodic frame interrupt</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ISOODRP</name>
+              <description>Isochronous OUT packet dropped interrupt</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENUMDNE</name>
+              <description>Enumeration done</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USBRST</name>
+              <description>USB reset</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USBSUSP</name>
+              <description>USB suspend</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ESUSP</name>
+              <description>Early suspend</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GOUTNAKEFF</name>
+              <description>Global OUT NAK effective</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GINAKEFF</name>
+              <description>Global IN non-periodic NAK effective</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NPTXFE</name>
+              <description>Non-periodic TxFIFO empty</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXFLVL</name>
+              <description>RxFIFO non-empty</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SOF</name>
+              <description>Start of frame</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OTGINT</name>
+              <description>OTG interrupt</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MMIS</name>
+              <description>Mode mismatch interrupt</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CMOD</name>
+              <description>Current mode of operation</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GINTMSK</name>
+          <displayName>GINTMSK</displayName>
+          <description>OTG_FS interrupt mask register (OTG_FS_GINTMSK)</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>WUIM</name>
+              <description>Resume/remote wakeup detected interrupt mask</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SRQIM</name>
+              <description>Session request/new session detected interrupt mask</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DISCINT</name>
+              <description>Disconnect detected interrupt mask</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CIDSCHGM</name>
+              <description>Connector ID status change mask</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PTXFEM</name>
+              <description>Periodic TxFIFO empty mask</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HCIM</name>
+              <description>Host channels interrupt mask</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRTIM</name>
+              <description>Host port interrupt mask</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>IPXFRM_IISOOXFRM</name>
+              <description>Incomplete periodic transfer mask(Host mode)/Incomplete isochronous OUT transfer mask(Device mode)</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IISOIXFRM</name>
+              <description>Incomplete isochronous IN transfer mask</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OEPINT</name>
+              <description>OUT endpoints interrupt mask</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IEPINT</name>
+              <description>IN endpoints interrupt mask</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPMISM</name>
+              <description>Endpoint mismatch interrupt mask</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EOPFM</name>
+              <description>End of periodic frame interrupt mask</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ISOODRPM</name>
+              <description>Isochronous OUT packet dropped interrupt mask</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENUMDNEM</name>
+              <description>Enumeration done mask</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USBRST</name>
+              <description>USB reset mask</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USBSUSPM</name>
+              <description>USB suspend mask</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ESUSPM</name>
+              <description>Early suspend mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GONAKEFFM</name>
+              <description>Global OUT NAK effective mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GINAKEFFM</name>
+              <description>Global non-periodic IN NAK effective mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NPTXFEM</name>
+              <description>Non-periodic TxFIFO empty mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXFLVLM</name>
+              <description>Receive FIFO non-empty mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SOFM</name>
+              <description>Start of frame mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OTGINT</name>
+              <description>OTG interrupt mask</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MMISM</name>
+              <description>Mode mismatch interrupt mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GRXSTSR_Device</name>
+          <displayName>GRXSTSR_Device</displayName>
+          <description>OTG_FS Receive status debug read(Device mode)</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FRMNUM</name>
+              <description>Frame number</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GRXSTSR_Host</name>
+          <displayName>GRXSTSR_Host</displayName>
+          <description>OTG_FS Receive status debug read(Hostmode)</description>
+          <alternateRegister>FS_GRXSTSR_Device</alternateRegister>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FRMNUM</name>
+              <description>Frame number</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GRXSTSP_Device</name>
+          <fields>
+            <field>
+              <name>STSPHST</name>
+              <description>Status phase start</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMNUM</name>
+              <description>Frame number</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+          <description>OTG status read and pop (device mode)</description>
+          <addressOffset>32</addressOffset>
+          <size>32</size>
+          <resetValue>0</resetValue>
+          <access>read-only</access>
+        </register>
+        <register>
+          <name>GRXSTSP_Host</name>
+          <fields>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>CHNUM</name>
+              <description>Channel number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+          <description>OTG status read and pop (host mode)</description>
+          <addressOffset>32</addressOffset>
+          <size>32</size>
+          <resetValue>0</resetValue>
+          <access>read-only</access>
+          <alternateRegister>GRXSTSP_Device</alternateRegister>
+        </register>
+        <register>
+          <name>GRXFSIZ</name>
+          <displayName>GRXFSIZ</displayName>
+          <description>OTG_FS Receive FIFO size register (OTG_FS_GRXFSIZ)</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000200</resetValue>
+          <fields>
+            <field>
+              <name>RXFD</name>
+              <description>RxFIFO depth</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTXF0</name>
+          <displayName>DIEPTXF0</displayName>
+          <description>OTG_FS non-periodic transmit FIFO size register (Device mode)</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000200</resetValue>
+          <fields>
+            <field>
+              <name>TX0FD</name>
+              <description>Endpoint 0 TxFIFO depth</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>TX0FSA</name>
+              <description>Endpoint 0 transmit RAM start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HNPTXFSIZ</name>
+          <displayName>HNPTXFSIZ</displayName>
+          <description>OTG_FS non-periodic transmit FIFO size register (Host mode)</description>
+          <alternateRegister>DIEPTXF0</alternateRegister>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000200</resetValue>
+          <fields>
+            <field>
+              <name>NPTXFD</name>
+              <description>Non-periodic TxFIFO depth</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>NPTXFSA</name>
+              <description>Non-periodic transmit RAM start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GNPTXSTS</name>
+          <displayName>GNPTXSTS</displayName>
+          <description>OTG_FS non-periodic transmit FIFO/queue status register (OTG_FS_GNPTXSTS)</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00080200</resetValue>
+          <fields>
+            <field>
+              <name>NPTXQTOP</name>
+              <description>Top of the non-periodic transmit request queue</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>NPTQXSAV</name>
+              <description>Non-periodic transmit request queue space available</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>NPTXFSAV</name>
+              <description>Non-periodic TxFIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCCFG</name>
+          <displayName>GCCFG</displayName>
+          <description>OTG_FS general core configuration register (OTG_FS_GCCFG)</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SOFOUTEN</name>
+              <description>SOF output enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VBUSBSEN</name>
+              <description>Enable the VBUS sensing device</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>VBUSASEN</name>
+              <description>Enable the VBUS sensing device</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PWRDWN</name>
+              <description>Power down</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CID</name>
+          <displayName>CID</displayName>
+          <description>core ID register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00001000</resetValue>
+          <fields>
+            <field>
+              <name>PRODUCT_ID</name>
+              <description>Product ID field</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HPTXFSIZ</name>
+          <displayName>HPTXFSIZ</displayName>
+          <description>OTG_FS Host periodic transmit FIFO size register (OTG_FS_HPTXFSIZ)</description>
+          <addressOffset>0x100</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x02000600</resetValue>
+          <fields>
+            <field>
+              <name>PTXFSIZ</name>
+              <description>Host periodic TxFIFO depth</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>PTXSA</name>
+              <description>Host periodic TxFIFO start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTXF%s</name>
+          <displayName>DIEPTXF1</displayName>
+          <description>OTG_FS device IN endpoint transmit FIFO size register (OTG_FS_DIEPTXF2)</description>
+          <addressOffset>0x104</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x02000400</resetValue>
+          <fields>
+            <field>
+              <name>INEPTXFD</name>
+              <description>IN endpoint TxFIFO depth</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>INEPTXSA</name>
+              <description>IN endpoint FIFO2 transmit RAM start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+          <dim>3</dim>
+          <dimIndex>1,2,3</dimIndex>
+          <dimIncrement>0x4</dimIncrement>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>OTG_FS_HOST</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>HCFG</name>
+          <displayName>HCFG</displayName>
+          <description>OTG_FS host configuration register (OTG_FS_HCFG)</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FSLSS</name>
+              <description>FS- and LS-only support</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>FSLSPCS</name>
+              <description>FS/LS PHY clock select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HFIR</name>
+          <displayName>HFIR</displayName>
+          <description>OTG_FS Host frame interval register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000EA60</resetValue>
+          <fields>
+            <field>
+              <name>FRIVL</name>
+              <description>Frame interval</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HFNUM</name>
+          <displayName>HFNUM</displayName>
+          <description>OTG_FS host frame number/frame time remaining register (OTG_FS_HFNUM)</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00003FFF</resetValue>
+          <fields>
+            <field>
+              <name>FTREM</name>
+              <description>Frame time remaining</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>FRNUM</name>
+              <description>Frame number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HPTXSTS</name>
+          <displayName>HPTXSTS</displayName>
+          <description>OTG_FS_Host periodic transmit FIFO/queue status register (OTG_FS_HPTXSTS)</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00080100</resetValue>
+          <fields>
+            <field>
+              <name>PTXQTOP</name>
+              <description>Top of the periodic transmit request queue</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PTXQSAV</name>
+              <description>Periodic transmit request queue space available</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PTXFSAVL</name>
+              <description>Periodic transmit data FIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HAINT</name>
+          <displayName>HAINT</displayName>
+          <description>OTG_FS Host all channels interrupt register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HAINT</name>
+              <description>Channel interrupts</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HAINTMSK</name>
+          <displayName>HAINTMSK</displayName>
+          <description>OTG_FS host all channels interrupt mask register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>HAINTM</name>
+              <description>Channel interrupt mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HPRT</name>
+          <displayName>HPRT</displayName>
+          <description>OTG_FS host port control and status register (OTG_FS_HPRT)</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PSPD</name>
+              <description>Port speed</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PTCTL</name>
+              <description>Port test control</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PPWR</name>
+              <description>Port power</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PLSTS</name>
+              <description>Port line status</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PRST</name>
+              <description>Port reset</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PSUSP</name>
+              <description>Port suspend</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRES</name>
+              <description>Port resume</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>POCCHNG</name>
+              <description>Port overcurrent change</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>POCA</name>
+              <description>Port overcurrent active</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PENCHNG</name>
+              <description>Port enable/disable change</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PENA</name>
+              <description>Port enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PCDET</name>
+              <description>Port connect detected</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PCSTS</name>
+              <description>Port connect status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR0</name>
+          <displayName>HCCHAR0</displayName>
+          <description>OTG_FS host channel-0 characteristics register (OTG_FS_HCCHAR0)</description>
+          <addressOffset>0x100</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT0</name>
+          <displayName>HCINT0</displayName>
+          <description>OTG_FS host channel-0 interrupt register (OTG_FS_HCINT0)</description>
+          <addressOffset>0x108</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK0</name>
+          <displayName>HCINTMSK0</displayName>
+          <description>OTG_FS host channel-0 mask register (OTG_FS_HCINTMSK0)</description>
+          <addressOffset>0x10C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ0</name>
+          <displayName>HCTSIZ0</displayName>
+          <description>OTG_FS host channel-0 transfer size register</description>
+          <addressOffset>0x110</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR1</name>
+          <displayName>HCCHAR1</displayName>
+          <description>OTG_FS host channel-1 characteristics register (OTG_FS_HCCHAR1)</description>
+          <addressOffset>0x120</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT1</name>
+          <displayName>HCINT1</displayName>
+          <description>OTG_FS host channel-1 interrupt register (OTG_FS_HCINT1)</description>
+          <addressOffset>0x128</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK1</name>
+          <displayName>HCINTMSK1</displayName>
+          <description>OTG_FS host channel-1 mask register (OTG_FS_HCINTMSK1)</description>
+          <addressOffset>0x12C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ1</name>
+          <displayName>HCTSIZ1</displayName>
+          <description>OTG_FS host channel-1 transfer size register</description>
+          <addressOffset>0x130</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR2</name>
+          <displayName>HCCHAR2</displayName>
+          <description>OTG_FS host channel-2 characteristics register (OTG_FS_HCCHAR2)</description>
+          <addressOffset>0x140</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT2</name>
+          <displayName>HCINT2</displayName>
+          <description>OTG_FS host channel-2 interrupt register (OTG_FS_HCINT2)</description>
+          <addressOffset>0x148</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK2</name>
+          <displayName>HCINTMSK2</displayName>
+          <description>OTG_FS host channel-2 mask register (OTG_FS_HCINTMSK2)</description>
+          <addressOffset>0x14C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ2</name>
+          <displayName>HCTSIZ2</displayName>
+          <description>OTG_FS host channel-2 transfer size register</description>
+          <addressOffset>0x150</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR3</name>
+          <displayName>HCCHAR3</displayName>
+          <description>OTG_FS host channel-3 characteristics register (OTG_FS_HCCHAR3)</description>
+          <addressOffset>0x160</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT3</name>
+          <displayName>HCINT3</displayName>
+          <description>OTG_FS host channel-3 interrupt register (OTG_FS_HCINT3)</description>
+          <addressOffset>0x168</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK3</name>
+          <displayName>HCINTMSK3</displayName>
+          <description>OTG_FS host channel-3 mask register (OTG_FS_HCINTMSK3)</description>
+          <addressOffset>0x16C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ3</name>
+          <displayName>HCTSIZ3</displayName>
+          <description>OTG_FS host channel-3 transfer size register</description>
+          <addressOffset>0x170</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR4</name>
+          <displayName>HCCHAR4</displayName>
+          <description>OTG_FS host channel-4 characteristics register (OTG_FS_HCCHAR4)</description>
+          <addressOffset>0x180</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT4</name>
+          <displayName>HCINT4</displayName>
+          <description>OTG_FS host channel-4 interrupt register (OTG_FS_HCINT4)</description>
+          <addressOffset>0x188</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK4</name>
+          <displayName>HCINTMSK4</displayName>
+          <description>OTG_FS host channel-4 mask register (OTG_FS_HCINTMSK4)</description>
+          <addressOffset>0x18C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ4</name>
+          <displayName>HCTSIZ4</displayName>
+          <description>OTG_FS host channel-x transfer size register</description>
+          <addressOffset>0x190</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR5</name>
+          <displayName>HCCHAR5</displayName>
+          <description>OTG_FS host channel-5 characteristics register (OTG_FS_HCCHAR5)</description>
+          <addressOffset>0x1A0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT5</name>
+          <displayName>HCINT5</displayName>
+          <description>OTG_FS host channel-5 interrupt register (OTG_FS_HCINT5)</description>
+          <addressOffset>0x1A8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK5</name>
+          <displayName>HCINTMSK5</displayName>
+          <description>OTG_FS host channel-5 mask register (OTG_FS_HCINTMSK5)</description>
+          <addressOffset>0x1AC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ5</name>
+          <displayName>HCTSIZ5</displayName>
+          <description>OTG_FS host channel-5 transfer size register</description>
+          <addressOffset>0x1B0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR6</name>
+          <displayName>HCCHAR6</displayName>
+          <description>OTG_FS host channel-6 characteristics register (OTG_FS_HCCHAR6)</description>
+          <addressOffset>0x1C0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT6</name>
+          <displayName>HCINT6</displayName>
+          <description>OTG_FS host channel-6 interrupt register (OTG_FS_HCINT6)</description>
+          <addressOffset>0x1C8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK6</name>
+          <displayName>HCINTMSK6</displayName>
+          <description>OTG_FS host channel-6 mask register (OTG_FS_HCINTMSK6)</description>
+          <addressOffset>0x1CC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ6</name>
+          <displayName>HCTSIZ6</displayName>
+          <description>OTG_FS host channel-6 transfer size register</description>
+          <addressOffset>0x1D0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCCHAR7</name>
+          <displayName>HCCHAR7</displayName>
+          <description>OTG_FS host channel-7 characteristics register (OTG_FS_HCCHAR7)</description>
+          <addressOffset>0x1E0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>CHENA</name>
+              <description>Channel enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHDIS</name>
+              <description>Channel disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ODDFRM</name>
+              <description>Odd frame</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>MCNT</name>
+              <description>Multicount</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>LSDEV</name>
+              <description>Low-speed device</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint direction</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINT7</name>
+          <displayName>HCINT7</displayName>
+          <description>OTG_FS host channel-7 interrupt register (OTG_FS_HCINT7)</description>
+          <addressOffset>0x1E8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERR</name>
+              <description>Data toggle error</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMOR</name>
+              <description>Frame overrun</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERR</name>
+              <description>Babble error</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERR</name>
+              <description>Transaction error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACK</name>
+              <description>ACK response received/transmitted interrupt</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAK</name>
+              <description>NAK response received interrupt</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL response received interrupt</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHH</name>
+              <description>Channel halted</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>Transfer completed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCINTMSK7</name>
+          <displayName>HCINTMSK7</displayName>
+          <description>OTG_FS host channel-7 mask register (OTG_FS_HCINTMSK7)</description>
+          <addressOffset>0x1EC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DTERRM</name>
+              <description>Data toggle error mask</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMORM</name>
+              <description>Frame overrun mask</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BBERRM</name>
+              <description>Babble error mask</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TXERRM</name>
+              <description>Transaction error mask</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NYET</name>
+              <description>response received interrupt mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ACKM</name>
+              <description>ACK response received/transmitted interrupt mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>NAKM</name>
+              <description>NAK response received interrupt mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STALLM</name>
+              <description>STALL response received interrupt mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CHHM</name>
+              <description>Channel halted mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HCTSIZ7</name>
+          <displayName>HCTSIZ7</displayName>
+          <description>OTG_FS host channel-7 transfer size register</description>
+          <addressOffset>0x1F0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>OTG_FS_DEVICE</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DCFG</name>
+          <displayName>DCFG</displayName>
+          <description>OTG_FS device configuration register (OTG_FS_DCFG)</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x02200000</resetValue>
+          <fields>
+            <field>
+              <name>PFIVL</name>
+              <description>Periodic frame interval</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>DAD</name>
+              <description>Device address</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+            <field>
+              <name>NZLSOHSK</name>
+              <description>Non-zero-length status OUT handshake</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DSPD</name>
+              <description>Device speed</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DCTL</name>
+          <displayName>DCTL</displayName>
+          <description>OTG_FS device control register (OTG_FS_DCTL)</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>POPRGDNE</name>
+              <description>Power-on programming done</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CGONAK</name>
+              <description>Clear global OUT NAK</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SGONAK</name>
+              <description>Set global OUT NAK</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CGINAK</name>
+              <description>Clear global IN NAK</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SGINAK</name>
+              <description>Set global IN NAK</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TCTL</name>
+              <description>Test control</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GONSTS</name>
+              <description>Global OUT NAK status</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GINSTS</name>
+              <description>Global IN NAK status</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SDIS</name>
+              <description>Soft disconnect</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RWUSIG</name>
+              <description>Remote wakeup signaling</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DSTS</name>
+          <displayName>DSTS</displayName>
+          <description>OTG_FS device status register (OTG_FS_DSTS)</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000010</resetValue>
+          <fields>
+            <field>
+              <name>FNSOF</name>
+              <description>Frame number of the received SOF</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>14</bitWidth>
+            </field>
+            <field>
+              <name>EERR</name>
+              <description>Erratic error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ENUMSPD</name>
+              <description>Enumerated speed</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>SUSPSTS</name>
+              <description>Suspend status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPMSK</name>
+          <displayName>DIEPMSK</displayName>
+          <description>OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPNEM</name>
+              <description>IN endpoint NAK effective mask</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INEPNMM</name>
+              <description>IN token received with EP mismatch mask</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ITTXFEMSK</name>
+              <description>IN token received when TxFIFO empty mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TOM</name>
+              <description>Timeout condition mask (Non-isochronous endpoints)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDM</name>
+              <description>Endpoint disabled interrupt mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed interrupt mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPMSK</name>
+          <displayName>DOEPMSK</displayName>
+          <description>OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OTEPDM</name>
+              <description>OUT token received when endpoint disabled mask</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STUPM</name>
+              <description>SETUP phase done mask</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDM</name>
+              <description>Endpoint disabled interrupt mask</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRCM</name>
+              <description>Transfer completed interrupt mask</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DAINT</name>
+          <displayName>DAINT</displayName>
+          <description>OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OEPINT</name>
+              <description>OUT endpoint interrupt bits</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>IEPINT</name>
+              <description>IN endpoint interrupt bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DAINTMSK</name>
+          <displayName>DAINTMSK</displayName>
+          <description>OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>OEPM</name>
+              <description>OUT EP interrupt mask bits</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+            <field>
+              <name>IEPM</name>
+              <description>IN EP interrupt mask bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DVBUSDIS</name>
+          <displayName>DVBUSDIS</displayName>
+          <description>OTG_FS device VBUS discharge time register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x000017D7</resetValue>
+          <fields>
+            <field>
+              <name>VBUSDT</name>
+              <description>Device VBUS discharge time</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DVBUSPULSE</name>
+          <displayName>DVBUSPULSE</displayName>
+          <description>OTG_FS device VBUS pulsing time register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x000005B8</resetValue>
+          <fields>
+            <field>
+              <name>DVBUSP</name>
+              <description>Device VBUS pulsing time</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPEMPMSK</name>
+          <displayName>DIEPEMPMSK</displayName>
+          <description>OTG_FS device IN endpoint FIFO empty interrupt mask register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPTXFEM</name>
+              <description>IN EP Tx FIFO empty interrupt mask bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPCTL0</name>
+          <displayName>DIEPCTL0</displayName>
+          <description>OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)</description>
+          <addressOffset>0x100</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EPENA</name>
+              <description>Endpoint enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDIS</name>
+              <description>Endpoint disable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SNAK</name>
+              <description>Set NAK</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CNAK</name>
+              <description>Clear NAK</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TXFNUM</name>
+              <description>TxFIFO number</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL handshake</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>Endpoint type</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NAKSTS</name>
+              <description>NAK status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>USBAEP</name>
+              <description>USB active endpoint</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>Maximum packet size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPINT0</name>
+          <displayName>DIEPINT0</displayName>
+          <description>device endpoint-x interrupt register</description>
+          <addressOffset>0x108</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>TXFE</name>
+              <description>TXFE</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INEPNE</name>
+              <description>INEPNE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ITTXFE</name>
+              <description>ITTXFE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TOC</name>
+              <description>TOC</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTSIZ0</name>
+          <displayName>DIEPTSIZ0</displayName>
+          <description>device endpoint-0 transfer size register</description>
+          <addressOffset>0x110</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTXFSTS0</name>
+          <displayName>DTXFSTS0</displayName>
+          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <addressOffset>0x118</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPTFSAV</name>
+              <description>IN endpoint TxFIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPCTL%s</name>
+          <displayName>DIEPCTL1</displayName>
+          <description>OTG device endpoint-1 control register</description>
+          <addressOffset>0x120</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EPENA</name>
+              <description>EPENA</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDIS</name>
+              <description>EPDIS</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SODDFRM_SD1PID</name>
+              <description>SODDFRM/SD1PID</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>SD0PID_SEVNFRM</name>
+              <description>SD0PID/SEVNFRM</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>SNAK</name>
+              <description>SNAK</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CNAK</name>
+              <description>CNAK</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TXFNUM</name>
+              <description>TXFNUM</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>EPTYP</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NAKSTS</name>
+              <description>NAKSTS</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EONUM_DPID</name>
+              <description>EONUM/DPID</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>USBAEP</name>
+              <description>USBAEP</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>MPSIZ</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+          <dim>3</dim>
+          <dimIndex>1,2,3</dimIndex>
+          <dimIncrement>0x20</dimIncrement>
+        </register>
+        <register>
+          <name>DIEPINT1</name>
+          <displayName>DIEPINT1</displayName>
+          <description>device endpoint-1 interrupt register</description>
+          <addressOffset>0x128</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>TXFE</name>
+              <description>TXFE</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INEPNE</name>
+              <description>INEPNE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ITTXFE</name>
+              <description>ITTXFE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TOC</name>
+              <description>TOC</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTSIZ1</name>
+          <displayName>DIEPTSIZ1</displayName>
+          <description>device endpoint-1 transfer size register</description>
+          <addressOffset>0x130</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCNT</name>
+              <description>Multi count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTXFSTS1</name>
+          <displayName>DTXFSTS1</displayName>
+          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <addressOffset>0x138</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPTFSAV</name>
+              <description>IN endpoint TxFIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPINT2</name>
+          <displayName>DIEPINT2</displayName>
+          <description>device endpoint-2 interrupt register</description>
+          <addressOffset>0x148</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>TXFE</name>
+              <description>TXFE</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INEPNE</name>
+              <description>INEPNE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ITTXFE</name>
+              <description>ITTXFE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TOC</name>
+              <description>TOC</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTSIZ2</name>
+          <displayName>DIEPTSIZ2</displayName>
+          <description>device endpoint-2 transfer size register</description>
+          <addressOffset>0x150</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCNT</name>
+              <description>Multi count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTXFSTS2</name>
+          <displayName>DTXFSTS2</displayName>
+          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <addressOffset>0x158</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPTFSAV</name>
+              <description>IN endpoint TxFIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPINT3</name>
+          <displayName>DIEPINT3</displayName>
+          <description>device endpoint-3 interrupt register</description>
+          <addressOffset>0x168</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>TXFE</name>
+              <description>TXFE</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INEPNE</name>
+              <description>INEPNE</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ITTXFE</name>
+              <description>ITTXFE</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TOC</name>
+              <description>TOC</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DIEPTSIZ3</name>
+          <displayName>DIEPTSIZ3</displayName>
+          <description>device endpoint-3 transfer size register</description>
+          <addressOffset>0x170</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>MCNT</name>
+              <description>Multi count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTXFSTS3</name>
+          <displayName>DTXFSTS3</displayName>
+          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <addressOffset>0x178</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>INEPTFSAV</name>
+              <description>IN endpoint TxFIFO space available</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPCTL0</name>
+          <displayName>DOEPCTL0</displayName>
+          <description>device endpoint-0 control register</description>
+          <addressOffset>0x300</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00008000</resetValue>
+          <fields>
+            <field>
+              <name>EPENA</name>
+              <description>EPENA</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>EPDIS</name>
+              <description>EPDIS</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SNAK</name>
+              <description>SNAK</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CNAK</name>
+              <description>CNAK</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SNPM</name>
+              <description>SNPM</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>EPTYP</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NAKSTS</name>
+              <description>NAKSTS</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>USBAEP</name>
+              <description>USBAEP</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>MPSIZ</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPINT0</name>
+          <displayName>DOEPINT0</displayName>
+          <description>device endpoint-0 interrupt register</description>
+          <addressOffset>0x308</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>B2BSTUP</name>
+              <description>B2BSTUP</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OTEPDIS</name>
+              <description>OTEPDIS</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STUP</name>
+              <description>STUP</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPTSIZ0</name>
+          <displayName>DOEPTSIZ0</displayName>
+          <description>device OUT endpoint-0 transfer size register</description>
+          <addressOffset>0x310</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STUPCNT</name>
+              <description>SETUP packet count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPCTL%s</name>
+          <displayName>DOEPCTL1</displayName>
+          <description>device endpoint-1 control register</description>
+          <addressOffset>0x320</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EPENA</name>
+              <description>EPENA</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPDIS</name>
+              <description>EPDIS</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SODDFRM</name>
+              <description>SODDFRM</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>SD0PID_SEVNFRM</name>
+              <description>SD0PID/SEVNFRM</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>SNAK</name>
+              <description>SNAK</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CNAK</name>
+              <description>CNAK</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>STALL</name>
+              <description>STALL</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SNPM</name>
+              <description>SNPM</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EPTYP</name>
+              <description>EPTYP</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NAKSTS</name>
+              <description>NAKSTS</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>EONUM_DPID</name>
+              <description>EONUM/DPID</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>USBAEP</name>
+              <description>USBAEP</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MPSIZ</name>
+              <description>MPSIZ</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>11</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+          <dim>3</dim>
+          <dimIndex>1,2,3</dimIndex>
+          <dimIncrement>0x20</dimIncrement>
+        </register>
+        <register>
+          <name>DOEPINT1</name>
+          <displayName>DOEPINT1</displayName>
+          <description>device endpoint-1 interrupt register</description>
+          <addressOffset>0x328</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>B2BSTUP</name>
+              <description>B2BSTUP</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OTEPDIS</name>
+              <description>OTEPDIS</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STUP</name>
+              <description>STUP</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPTSIZ1</name>
+          <displayName>DOEPTSIZ1</displayName>
+          <description>device OUT endpoint-1 transfer size register</description>
+          <addressOffset>0x330</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RXDPID_STUPCNT</name>
+              <description>Received data PID/SETUP packet count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPINT2</name>
+          <displayName>DOEPINT2</displayName>
+          <description>device endpoint-2 interrupt register</description>
+          <addressOffset>0x348</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>B2BSTUP</name>
+              <description>B2BSTUP</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OTEPDIS</name>
+              <description>OTEPDIS</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STUP</name>
+              <description>STUP</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPTSIZ2</name>
+          <displayName>DOEPTSIZ2</displayName>
+          <description>device OUT endpoint-2 transfer size register</description>
+          <addressOffset>0x350</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RXDPID_STUPCNT</name>
+              <description>Received data PID/SETUP packet count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPINT3</name>
+          <displayName>DOEPINT3</displayName>
+          <description>device endpoint-3 interrupt register</description>
+          <addressOffset>0x368</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000080</resetValue>
+          <fields>
+            <field>
+              <name>B2BSTUP</name>
+              <description>B2BSTUP</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OTEPDIS</name>
+              <description>OTEPDIS</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STUP</name>
+              <description>STUP</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPDISD</name>
+              <description>EPDISD</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XFRC</name>
+              <description>XFRC</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DOEPTSIZ3</name>
+          <displayName>DOEPTSIZ3</displayName>
+          <description>device OUT endpoint-3 transfer size register</description>
+          <addressOffset>0x370</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RXDPID_STUPCNT</name>
+              <description>Received data PID/SETUP packet count</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>PKTCNT</name>
+              <description>Packet count</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
+            <field>
+              <name>XFRSIZ</name>
+              <description>Transfer size</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>19</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>OTG_FS_PWRCLK</name>
+      <description>USB on the go full speed</description>
+      <groupName>USB_OTG_FS</groupName>
+      <baseAddress>0x50000E00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>PCGCCTL</name>
+          <displayName>PCGCCTL</displayName>
+          <description>OTG_FS power and clock gating control register (OTG_FS_PCGCCTL)</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PHYSUSP</name>
+              <description>PHY Suspended</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>GATEHCLK</name>
+              <description>Gate HCLK</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STPPCLK</name>
+              <description>Stop PHY clock</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>
