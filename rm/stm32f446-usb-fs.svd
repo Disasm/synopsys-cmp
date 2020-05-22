@@ -585,6 +585,7 @@
           <description>OTG_FS interrupt mask register (OTG_FS_GINTMSK)</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -592,175 +593,156 @@
               <description>Resume/remote wakeup detected interrupt mask</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>SRQIM</name>
               <description>Session request/new session detected interrupt mask</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>DISCINT</name>
               <description>Disconnect detected interrupt mask</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>CIDSCHGM</name>
               <description>Connector ID status change mask</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMINTM</name>
+              <description>LPM interrupt mask</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>PTXFEM</name>
               <description>Periodic TxFIFO empty mask</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>HCIM</name>
               <description>Host channels interrupt mask</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>PRTIM</name>
               <description>Host port interrupt mask</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+            </field>
+            <field>
+              <name>RSTDETM</name>
+              <description>Reset detected interrupt mask</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
             </field>
             <field>
               <name>IPXFRM_IISOOXFRM</name>
               <description>Incomplete periodic transfer mask(Host mode)/Incomplete isochronous OUT transfer mask(Device mode)</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>IISOIXFRM</name>
               <description>Incomplete isochronous IN transfer mask</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>OEPINT</name>
               <description>OUT endpoints interrupt mask</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>IEPINT</name>
               <description>IN endpoints interrupt mask</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>EPMISM</name>
-              <description>Endpoint mismatch interrupt mask</description>
-              <bitOffset>17</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>EOPFM</name>
               <description>End of periodic frame interrupt mask</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>ISOODRPM</name>
               <description>Isochronous OUT packet dropped interrupt mask</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>ENUMDNEM</name>
               <description>Enumeration done mask</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>USBRST</name>
               <description>USB reset mask</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>USBSUSPM</name>
               <description>USB suspend mask</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>ESUSPM</name>
               <description>Early suspend mask</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>GONAKEFFM</name>
               <description>Global OUT NAK effective mask</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>GINAKEFFM</name>
               <description>Global non-periodic IN NAK effective mask</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>NPTXFEM</name>
               <description>Non-periodic TxFIFO empty mask</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>RXFLVLM</name>
               <description>Receive FIFO non-empty mask</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>SOFM</name>
               <description>Start of frame mask</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>OTGINT</name>
               <description>OTG interrupt mask</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
             <field>
               <name>MMISM</name>
               <description>Mode mismatch interrupt mask</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
           </fields>
         </register>
