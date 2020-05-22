@@ -1224,7 +1224,7 @@
         <register>
           <name>HCFG</name>
           <displayName>HCFG</displayName>
-          <description>OTG_FS host configuration register (OTG_FS_HCFG)</description>
+          <description>OTG host configuration register (OTG_HCFG)</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000000</resetValue>
@@ -1248,7 +1248,7 @@
         <register>
           <name>HFIR</name>
           <displayName>HFIR</displayName>
-          <description>OTG_FS Host frame interval register</description>
+          <description>OTG Host frame interval register</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1265,7 +1265,7 @@
         <register>
           <name>HFNUM</name>
           <displayName>HFNUM</displayName>
-          <description>OTG_FS host frame number/frame time remaining register (OTG_FS_HFNUM)</description>
+          <description>OTG host frame number/frame time remaining register (OTG_HFNUM)</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -1288,7 +1288,7 @@
         <register>
           <name>HPTXSTS</name>
           <displayName>HPTXSTS</displayName>
-          <description>OTG_FS_Host periodic transmit FIFO/queue status register (OTG_FS_HPTXSTS)</description>
+          <description>OTG_Host periodic transmit FIFO/queue status register (OTG_HPTXSTS)</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <resetValue>0x00080100</resetValue>
@@ -1319,7 +1319,7 @@
         <register>
           <name>HAINT</name>
           <displayName>HAINT</displayName>
-          <description>OTG_FS Host all channels interrupt register</description>
+          <description>OTG Host all channels interrupt register</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -1336,7 +1336,7 @@
         <register>
           <name>HAINTMSK</name>
           <displayName>HAINTMSK</displayName>
-          <description>OTG_FS host all channels interrupt mask register</description>
+          <description>OTG host all channels interrupt mask register</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1353,7 +1353,7 @@
         <register>
           <name>HPRT</name>
           <displayName>HPRT</displayName>
-          <description>OTG_FS host port control and status register (OTG_FS_HPRT)</description>
+          <description>OTG host port control and status register (OTG_HPRT)</description>
           <addressOffset>0x40</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000000</resetValue>
@@ -1454,7 +1454,7 @@
         <register>
           <name>HCCHAR0</name>
           <displayName>HCCHAR0</displayName>
-          <description>OTG_FS host channel-0 characteristics register (OTG_FS_HCCHAR0)</description>
+          <description>OTG host channel-0 characteristics register (OTG_HCCHAR0)</description>
           <addressOffset>0x100</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1525,7 +1525,7 @@
         <register>
           <name>HCINT0</name>
           <displayName>HCINT0</displayName>
-          <description>OTG_FS host channel-0 interrupt register (OTG_FS_HCINT0)</description>
+          <description>OTG host channel-0 interrupt register (OTG_HCINT0)</description>
           <addressOffset>0x108</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1590,7 +1590,7 @@
         <register>
           <name>HCINTMSK0</name>
           <displayName>HCINTMSK0</displayName>
-          <description>OTG_FS host channel-0 mask register (OTG_FS_HCINTMSK0)</description>
+          <description>OTG host channel-0 mask register (OTG_HCINTMSK0)</description>
           <addressOffset>0x10C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1661,7 +1661,7 @@
         <register>
           <name>HCTSIZ0</name>
           <displayName>HCTSIZ0</displayName>
-          <description>OTG_FS host channel-0 transfer size register</description>
+          <description>OTG host channel-0 transfer size register</description>
           <addressOffset>0x110</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1690,7 +1690,7 @@
         <register>
           <name>HCCHAR1</name>
           <displayName>HCCHAR1</displayName>
-          <description>OTG_FS host channel-1 characteristics register (OTG_FS_HCCHAR1)</description>
+          <description>OTG host channel-1 characteristics register (OTG_HCCHAR1)</description>
           <addressOffset>0x120</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1761,7 +1761,7 @@
         <register>
           <name>HCINT1</name>
           <displayName>HCINT1</displayName>
-          <description>OTG_FS host channel-1 interrupt register (OTG_FS_HCINT1)</description>
+          <description>OTG host channel-1 interrupt register (OTG_HCINT1)</description>
           <addressOffset>0x128</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1826,7 +1826,7 @@
         <register>
           <name>HCINTMSK1</name>
           <displayName>HCINTMSK1</displayName>
-          <description>OTG_FS host channel-1 mask register (OTG_FS_HCINTMSK1)</description>
+          <description>OTG host channel-1 mask register (OTG_HCINTMSK1)</description>
           <addressOffset>0x12C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1897,7 +1897,7 @@
         <register>
           <name>HCTSIZ1</name>
           <displayName>HCTSIZ1</displayName>
-          <description>OTG_FS host channel-1 transfer size register</description>
+          <description>OTG host channel-1 transfer size register</description>
           <addressOffset>0x130</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1926,7 +1926,7 @@
         <register>
           <name>HCCHAR2</name>
           <displayName>HCCHAR2</displayName>
-          <description>OTG_FS host channel-2 characteristics register (OTG_FS_HCCHAR2)</description>
+          <description>OTG host channel-2 characteristics register (OTG_HCCHAR2)</description>
           <addressOffset>0x140</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -1997,7 +1997,7 @@
         <register>
           <name>HCINT2</name>
           <displayName>HCINT2</displayName>
-          <description>OTG_FS host channel-2 interrupt register (OTG_FS_HCINT2)</description>
+          <description>OTG host channel-2 interrupt register (OTG_HCINT2)</description>
           <addressOffset>0x148</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2062,7 +2062,7 @@
         <register>
           <name>HCINTMSK2</name>
           <displayName>HCINTMSK2</displayName>
-          <description>OTG_FS host channel-2 mask register (OTG_FS_HCINTMSK2)</description>
+          <description>OTG host channel-2 mask register (OTG_HCINTMSK2)</description>
           <addressOffset>0x14C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2133,7 +2133,7 @@
         <register>
           <name>HCTSIZ2</name>
           <displayName>HCTSIZ2</displayName>
-          <description>OTG_FS host channel-2 transfer size register</description>
+          <description>OTG host channel-2 transfer size register</description>
           <addressOffset>0x150</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2162,7 +2162,7 @@
         <register>
           <name>HCCHAR3</name>
           <displayName>HCCHAR3</displayName>
-          <description>OTG_FS host channel-3 characteristics register (OTG_FS_HCCHAR3)</description>
+          <description>OTG host channel-3 characteristics register (OTG_HCCHAR3)</description>
           <addressOffset>0x160</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2233,7 +2233,7 @@
         <register>
           <name>HCINT3</name>
           <displayName>HCINT3</displayName>
-          <description>OTG_FS host channel-3 interrupt register (OTG_FS_HCINT3)</description>
+          <description>OTG host channel-3 interrupt register (OTG_HCINT3)</description>
           <addressOffset>0x168</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2298,7 +2298,7 @@
         <register>
           <name>HCINTMSK3</name>
           <displayName>HCINTMSK3</displayName>
-          <description>OTG_FS host channel-3 mask register (OTG_FS_HCINTMSK3)</description>
+          <description>OTG host channel-3 mask register (OTG_HCINTMSK3)</description>
           <addressOffset>0x16C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2369,7 +2369,7 @@
         <register>
           <name>HCTSIZ3</name>
           <displayName>HCTSIZ3</displayName>
-          <description>OTG_FS host channel-3 transfer size register</description>
+          <description>OTG host channel-3 transfer size register</description>
           <addressOffset>0x170</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2398,7 +2398,7 @@
         <register>
           <name>HCCHAR4</name>
           <displayName>HCCHAR4</displayName>
-          <description>OTG_FS host channel-4 characteristics register (OTG_FS_HCCHAR4)</description>
+          <description>OTG host channel-4 characteristics register (OTG_HCCHAR4)</description>
           <addressOffset>0x180</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2469,7 +2469,7 @@
         <register>
           <name>HCINT4</name>
           <displayName>HCINT4</displayName>
-          <description>OTG_FS host channel-4 interrupt register (OTG_FS_HCINT4)</description>
+          <description>OTG host channel-4 interrupt register (OTG_HCINT4)</description>
           <addressOffset>0x188</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2534,7 +2534,7 @@
         <register>
           <name>HCINTMSK4</name>
           <displayName>HCINTMSK4</displayName>
-          <description>OTG_FS host channel-4 mask register (OTG_FS_HCINTMSK4)</description>
+          <description>OTG host channel-4 mask register (OTG_HCINTMSK4)</description>
           <addressOffset>0x18C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2605,7 +2605,7 @@
         <register>
           <name>HCTSIZ4</name>
           <displayName>HCTSIZ4</displayName>
-          <description>OTG_FS host channel-x transfer size register</description>
+          <description>OTG host channel-x transfer size register</description>
           <addressOffset>0x190</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2634,7 +2634,7 @@
         <register>
           <name>HCCHAR5</name>
           <displayName>HCCHAR5</displayName>
-          <description>OTG_FS host channel-5 characteristics register (OTG_FS_HCCHAR5)</description>
+          <description>OTG host channel-5 characteristics register (OTG_HCCHAR5)</description>
           <addressOffset>0x1A0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2705,7 +2705,7 @@
         <register>
           <name>HCINT5</name>
           <displayName>HCINT5</displayName>
-          <description>OTG_FS host channel-5 interrupt register (OTG_FS_HCINT5)</description>
+          <description>OTG host channel-5 interrupt register (OTG_HCINT5)</description>
           <addressOffset>0x1A8</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2770,7 +2770,7 @@
         <register>
           <name>HCINTMSK5</name>
           <displayName>HCINTMSK5</displayName>
-          <description>OTG_FS host channel-5 mask register (OTG_FS_HCINTMSK5)</description>
+          <description>OTG host channel-5 mask register (OTG_HCINTMSK5)</description>
           <addressOffset>0x1AC</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2841,7 +2841,7 @@
         <register>
           <name>HCTSIZ5</name>
           <displayName>HCTSIZ5</displayName>
-          <description>OTG_FS host channel-5 transfer size register</description>
+          <description>OTG host channel-5 transfer size register</description>
           <addressOffset>0x1B0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2870,7 +2870,7 @@
         <register>
           <name>HCCHAR6</name>
           <displayName>HCCHAR6</displayName>
-          <description>OTG_FS host channel-6 characteristics register (OTG_FS_HCCHAR6)</description>
+          <description>OTG host channel-6 characteristics register (OTG_HCCHAR6)</description>
           <addressOffset>0x1C0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -2941,7 +2941,7 @@
         <register>
           <name>HCINT6</name>
           <displayName>HCINT6</displayName>
-          <description>OTG_FS host channel-6 interrupt register (OTG_FS_HCINT6)</description>
+          <description>OTG host channel-6 interrupt register (OTG_HCINT6)</description>
           <addressOffset>0x1C8</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3006,7 +3006,7 @@
         <register>
           <name>HCINTMSK6</name>
           <displayName>HCINTMSK6</displayName>
-          <description>OTG_FS host channel-6 mask register (OTG_FS_HCINTMSK6)</description>
+          <description>OTG host channel-6 mask register (OTG_HCINTMSK6)</description>
           <addressOffset>0x1CC</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3077,7 +3077,7 @@
         <register>
           <name>HCTSIZ6</name>
           <displayName>HCTSIZ6</displayName>
-          <description>OTG_FS host channel-6 transfer size register</description>
+          <description>OTG host channel-6 transfer size register</description>
           <addressOffset>0x1D0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3106,7 +3106,7 @@
         <register>
           <name>HCCHAR7</name>
           <displayName>HCCHAR7</displayName>
-          <description>OTG_FS host channel-7 characteristics register (OTG_FS_HCCHAR7)</description>
+          <description>OTG host channel-7 characteristics register (OTG_HCCHAR7)</description>
           <addressOffset>0x1E0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3177,7 +3177,7 @@
         <register>
           <name>HCINT7</name>
           <displayName>HCINT7</displayName>
-          <description>OTG_FS host channel-7 interrupt register (OTG_FS_HCINT7)</description>
+          <description>OTG host channel-7 interrupt register (OTG_HCINT7)</description>
           <addressOffset>0x1E8</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3242,7 +3242,7 @@
         <register>
           <name>HCINTMSK7</name>
           <displayName>HCINTMSK7</displayName>
-          <description>OTG_FS host channel-7 mask register (OTG_FS_HCINTMSK7)</description>
+          <description>OTG host channel-7 mask register (OTG_HCINTMSK7)</description>
           <addressOffset>0x1EC</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3313,7 +3313,7 @@
         <register>
           <name>HCTSIZ7</name>
           <displayName>HCTSIZ7</displayName>
-          <description>OTG_FS host channel-7 transfer size register</description>
+          <description>OTG host channel-7 transfer size register</description>
           <addressOffset>0x1F0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3355,7 +3355,7 @@
         <register>
           <name>DCFG</name>
           <displayName>DCFG</displayName>
-          <description>OTG_FS device configuration register (OTG_FS_DCFG)</description>
+          <description>OTG device configuration register (OTG_DCFG)</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3390,7 +3390,7 @@
         <register>
           <name>DCTL</name>
           <displayName>DCTL</displayName>
-          <description>OTG_FS device control register (OTG_FS_DCTL)</description>
+          <description>OTG device control register (OTG_DCTL)</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000000</resetValue>
@@ -3470,7 +3470,7 @@
         <register>
           <name>DSTS</name>
           <displayName>DSTS</displayName>
-          <description>OTG_FS device status register (OTG_FS_DSTS)</description>
+          <description>OTG device status register (OTG_DSTS)</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -3505,7 +3505,7 @@
         <register>
           <name>DIEPMSK</name>
           <displayName>DIEPMSK</displayName>
-          <description>OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)</description>
+          <description>OTG device IN endpoint common interrupt mask register (OTG_DIEPMSK)</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3552,7 +3552,7 @@
         <register>
           <name>DOEPMSK</name>
           <displayName>DOEPMSK</displayName>
-          <description>OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)</description>
+          <description>OTG device OUT endpoint common interrupt mask register (OTG_DOEPMSK)</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3587,7 +3587,7 @@
         <register>
           <name>DAINT</name>
           <displayName>DAINT</displayName>
-          <description>OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)</description>
+          <description>OTG device all endpoints interrupt register (OTG_DAINT)</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -3610,7 +3610,7 @@
         <register>
           <name>DAINTMSK</name>
           <displayName>DAINTMSK</displayName>
-          <description>OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)</description>
+          <description>OTG all endpoints interrupt mask register (OTG_DAINTMSK)</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3633,7 +3633,7 @@
         <register>
           <name>DVBUSDIS</name>
           <displayName>DVBUSDIS</displayName>
-          <description>OTG_FS device VBUS discharge time register</description>
+          <description>OTG device VBUS discharge time register</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3650,7 +3650,7 @@
         <register>
           <name>DVBUSPULSE</name>
           <displayName>DVBUSPULSE</displayName>
-          <description>OTG_FS device VBUS pulsing time register</description>
+          <description>OTG device VBUS pulsing time register</description>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3667,7 +3667,7 @@
         <register>
           <name>DIEPEMPMSK</name>
           <displayName>DIEPEMPMSK</displayName>
-          <description>OTG_FS device IN endpoint FIFO empty interrupt mask register</description>
+          <description>OTG device IN endpoint FIFO empty interrupt mask register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -3684,7 +3684,7 @@
         <register>
           <name>DIEPCTL0</name>
           <displayName>DIEPCTL0</displayName>
-          <description>OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)</description>
+          <description>OTG device control IN endpoint 0 control register (OTG_DIEPCTL0)</description>
           <addressOffset>0x100</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000000</resetValue>
@@ -3839,7 +3839,7 @@
         <register>
           <name>DTXFSTS0</name>
           <displayName>DTXFSTS0</displayName>
-          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <description>OTG device IN endpoint transmit FIFO status register</description>
           <addressOffset>0x118</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -4047,7 +4047,7 @@
         <register>
           <name>DTXFSTS%s</name>
           <displayName>DTXFSTS1</displayName>
-          <description>OTG_FS device IN endpoint transmit FIFO status register</description>
+          <description>OTG device IN endpoint transmit FIFO status register</description>
           <addressOffset>0x138</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
@@ -4410,7 +4410,7 @@
         <register>
           <name>PCGCCTL</name>
           <displayName>PCGCCTL</displayName>
-          <description>OTG_FS power and clock gating control register (OTG_FS_PCGCCTL)</description>
+          <description>OTG power and clock gating control register (OTG_PCGCCTL)</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
