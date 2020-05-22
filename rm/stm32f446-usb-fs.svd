@@ -191,6 +191,11 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
+              <name>IDCHNG</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
               <name>DBCDNE</name>
               <description>Debounce done</description>
               <bitOffset>19</bitOffset>
