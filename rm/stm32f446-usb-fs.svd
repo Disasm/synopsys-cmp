@@ -327,7 +327,7 @@
           <description>OTG_FS reset register (OTG_FS_GRSTCTL)</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
-          <resetValue>0x20000000</resetValue>
+          <resetValue>0x80000000</resetValue>
           <fields>
             <field>
               <name>AHBIDL</name>
@@ -365,8 +365,8 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>HSRST</name>
-              <description>HCLK soft reset</description>
+              <name>PSRST</name>
+              <description>Partial soft reset</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
