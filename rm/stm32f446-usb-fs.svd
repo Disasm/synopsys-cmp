@@ -913,7 +913,7 @@
         <register>
           <name>GRXFSIZ</name>
           <displayName>GRXFSIZ</displayName>
-          <description>OTG_FS Receive FIFO size register (OTG_FS_GRXFSIZ)</description>
+          <description>OTG Receive FIFO size register (OTG_GRXFSIZ)</description>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
