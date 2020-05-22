@@ -749,88 +749,11 @@
         <register>
           <name>GRXSTSR_Device</name>
           <displayName>GRXSTSR_Device</displayName>
-          <description>OTG_FS Receive status debug read(Device mode)</description>
+          <description>OTG receive status debug read (device mode)</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>FRMNUM</name>
-              <description>Frame number</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>PKTSTS</name>
-              <description>Packet status</description>
-              <bitOffset>17</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>DPID</name>
-              <description>Data PID</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>2</bitWidth>
-            </field>
-            <field>
-              <name>BCNT</name>
-              <description>Byte count</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>11</bitWidth>
-            </field>
-            <field>
-              <name>EPNUM</name>
-              <description>Endpoint number</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GRXSTSR_Host</name>
-          <displayName>GRXSTSR_Host</displayName>
-          <description>OTG_FS Receive status debug read(Host mode)</description>
-          <alternateRegister>FS_GRXSTSR_Device</alternateRegister>
-          <addressOffset>0x1C</addressOffset>
-          <size>0x20</size>
-          <access>read-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>FRMNUM</name>
-              <description>Frame number</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>PKTSTS</name>
-              <description>Packet status</description>
-              <bitOffset>17</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>DPID</name>
-              <description>Data PID</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>2</bitWidth>
-            </field>
-            <field>
-              <name>BCNT</name>
-              <description>Byte count</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>11</bitWidth>
-            </field>
-            <field>
-              <name>EPNUM</name>
-              <description>Endpoint number</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GRXSTSP_Device</name>
           <fields>
             <field>
               <name>STSPHST</name>
@@ -869,14 +792,16 @@
               <bitWidth>4</bitWidth>
             </field>
           </fields>
-          <description>OTG status read and pop (device mode)</description>
-          <addressOffset>32</addressOffset>
-          <size>32</size>
-          <resetValue>0</resetValue>
-          <access>read-only</access>
         </register>
         <register>
-          <name>GRXSTSP_Host</name>
+          <name>GRXSTSR_Host</name>
+          <displayName>GRXSTSR_Host</displayName>
+          <description>OTG receive status debug read (host mode)</description>
+          <alternateRegister>GRXSTSR_Device</alternateRegister>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
           <fields>
             <field>
               <name>PKTSTS</name>
@@ -903,13 +828,87 @@
               <bitWidth>4</bitWidth>
             </field>
           </fields>
-          <description>OTG status read and pop (host mode)</description>
-          <addressOffset>32</addressOffset>
-          <size>32</size>
-          <resetValue>0</resetValue>
+        </register>
+        <register>
+          <name>GRXSTSP_Device</name>
+          <description>OTG status read and pop (device mode)</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
           <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>STSPHST</name>
+              <description>Status phase start</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FRMNUM</name>
+              <description>Frame number</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GRXSTSP_Host</name>
+          <description>OTG status read and pop (host mode)</description>
           <alternateRegister>GRXSTSP_Device</alternateRegister>
-          <GLPMCFG>OrderedDict([('addressOffset', 84)])</GLPMCFG>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PKTSTS</name>
+              <description>Packet status</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>DPID</name>
+              <description>Data PID</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+            <field>
+              <name>BCNT</name>
+              <description>Byte count</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>CHNUM</name>
+              <description>Channel number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>GRXFSIZ</name>
