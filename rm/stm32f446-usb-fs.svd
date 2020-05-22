@@ -975,9 +975,8 @@
           </fields>
         </register>
         <register>
-          <name>GNPTXSTS</name>
-          <displayName>GNPTXSTS</displayName>
-          <description>OTG_FS non-periodic transmit FIFO/queue status register (OTG_FS_GNPTXSTS)</description>
+          <name>HNPTXSTS</name>
+          <description>OTG non-periodic transmit FIFO/queue status register (OTG_HNPTXSTS)</description>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
           <access>read-only</access>
