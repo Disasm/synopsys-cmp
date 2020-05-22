@@ -386,7 +386,7 @@
           <description>OTG_FS core interrupt register (OTG_FS_GINTSTS)</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
-          <resetValue>0x04000020</resetValue>
+          <resetValue>0x14000020</resetValue>
           <fields>
             <field>
               <name>WKUPINT</name>
@@ -417,6 +417,13 @@
               <access>read-write</access>
             </field>
             <field>
+              <name>LPMINT</name>
+              <description>LPM interrupt</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>PTXFE</name>
               <description>Periodic TxFIFO empty</description>
               <bitOffset>26</bitOffset>
@@ -436,6 +443,13 @@
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>RSTDET</name>
+              <description>Reset detected interrupt</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>IPXFR_INCOMPISOOUT</name>
@@ -508,7 +522,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>GOUTNAKEFF</name>
+              <name>GONAKEFF</name>
               <description>Global OUT NAK effective</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
