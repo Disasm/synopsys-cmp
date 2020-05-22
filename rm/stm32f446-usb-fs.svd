@@ -1043,6 +1043,121 @@
           </fields>
         </register>
         <register>
+          <name>GLPMCFG</name>
+          <displayName>GLPMCFG</displayName>
+          <description>OTG core LPM configuration register (OTG_GLPMCFG)</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ENBESL</name>
+              <description>Enable best effort service latency</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMRCNTSTS</name>
+              <description>LPM retry count status</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SNDLPM</name>
+              <description>Send LPM transaction</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMRCNT</name>
+              <description>LPM retry count</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMCHIDX</name>
+              <description>LPM Channel Index</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>L1RSMOK</name>
+              <description>Sleep state resume OK</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SLPSTS</name>
+              <description>Port sleep status</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LPMRSP</name>
+              <description>LPM response</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>L1DSEN</name>
+              <description>L1 deep sleep enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BESLTHRS</name>
+              <description>BESL threshold</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>L1SSEN</name>
+              <description>L1 Shallow Sleep enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REMWAKE</name>
+              <description>bRemoteWake value</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BESL</name>
+              <description>Best effort service latency</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMACK</name>
+              <description>LPM token acknowledge enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LPMEN</name>
+              <description>LPM support enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
           <name>HPTXFSIZ</name>
           <displayName>HPTXFSIZ</displayName>
           <description>OTG_FS Host periodic transmit FIFO size register (OTG_FS_HPTXFSIZ)</description>
