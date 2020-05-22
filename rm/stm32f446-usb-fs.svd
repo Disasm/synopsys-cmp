@@ -930,11 +930,11 @@
         <register>
           <name>DIEPTXF0</name>
           <displayName>DIEPTXF0</displayName>
-          <description>OTG_FS non-periodic transmit FIFO size register (Device mode)</description>
+          <description>Endpoint 0 Transmit FIFO size register (device mode)</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
-          <resetValue>0x00000200</resetValue>
+          <resetValue>0x02000200</resetValue>
           <fields>
             <field>
               <name>TX0FD</name>
@@ -953,12 +953,12 @@
         <register>
           <name>HNPTXFSIZ</name>
           <displayName>HNPTXFSIZ</displayName>
-          <description>OTG_FS non-periodic transmit FIFO size register (Host mode)</description>
+          <description>OTG host non-periodic transmit FIFO size register (host mode)</description>
           <alternateRegister>DIEPTXF0</alternateRegister>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
-          <resetValue>0x00000200</resetValue>
+          <resetValue>0x02000200</resetValue>
           <fields>
             <field>
               <name>NPTXFD</name>
