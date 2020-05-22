@@ -41,7 +41,7 @@
         <register>
           <name>GOTGCTL</name>
           <displayName>GOTGCTL</displayName>
-          <description>OTG_FS control and status register (OTG_FS_GOTGCTL)</description>
+          <description>OTG control and status register (OTG_GOTGCTL)</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00010000</resetValue>
@@ -184,7 +184,7 @@
         <register>
           <name>GOTGINT</name>
           <displayName>GOTGINT</displayName>
-          <description>OTG_FS interrupt register (OTG_FS_GOTGINT)</description>
+          <description>OTG interrupt register (OTG_GOTGINT)</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -236,7 +236,7 @@
         <register>
           <name>GAHBCFG</name>
           <displayName>GAHBCFG</displayName>
-          <description>OTG_FS AHB configuration register (OTG_FS_GAHBCFG)</description>
+          <description>OTG AHB configuration register (OTG_GAHBCFG)</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -265,7 +265,7 @@
         <register>
           <name>GUSBCFG</name>
           <displayName>GUSBCFG</displayName>
-          <description>OTG_FS USB configuration register (OTG_FS_GUSBCFG)</description>
+          <description>OTG USB configuration register (OTG_GUSBCFG)</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <resetValue>0x00001440</resetValue>
@@ -324,7 +324,7 @@
         <register>
           <name>GRSTCTL</name>
           <displayName>GRSTCTL</displayName>
-          <description>OTG_FS reset register (OTG_FS_GRSTCTL)</description>
+          <description>OTG reset register (OTG_GRSTCTL)</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <resetValue>0x80000000</resetValue>
@@ -383,7 +383,7 @@
         <register>
           <name>GINTSTS</name>
           <displayName>GINTSTS</displayName>
-          <description>OTG_FS core interrupt register (OTG_FS_GINTSTS)</description>
+          <description>OTG core interrupt register (OTG_GINTSTS)</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <resetValue>0x14000020</resetValue>
@@ -582,7 +582,7 @@
         <register>
           <name>GINTMSK</name>
           <displayName>GINTMSK</displayName>
-          <description>OTG_FS interrupt mask register (OTG_FS_GINTMSK)</description>
+          <description>OTG interrupt mask register (OTG_GINTMSK)</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
